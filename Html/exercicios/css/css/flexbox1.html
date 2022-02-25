@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox #01</title>
+    <link rel="stylesheet" href="css/tag.css" />
+    <style>
+      div {
+        border: solid 3px blue;
+        font-size: 40px;
+        margin: 5px;
+      }
+
+      .big {
+        font-size: 1.5em;
+      }
+
+      .flex-container {
+        /*Main axis  */
+
+        display: flex; /*por padrão é row*/
+        flex-direction: column; /*muda o flex pra coluna*/
+        flex-direction: column-reverse; /*column-reverse inverte a ordem da coluna*/
+        flex-direction: row-reverse; /*row-reverse inverte a ordem da linha muda a posição como se fosse  um float right */
+        flex-direction: row; /*row é padrão*/
+        width: 50%;
+        height: 200px;
+        flex-wrap: wrap; /*quebra pra linha abaixo*/
+        flex-wrap: wrap-reverse; /*inverte na diagonal*/
+
+        /*flex-flow mistura flex-direction com o flex-wrap*/
+        flex-flow: column-reverse wrap; /*coloca coma coluna invertida e quebra pra linha abaixo*/
+        flex-flow: row wrap; /*coloca coma linha equebra pra linha abaixo*/
+
+        justify-content: flex-start; /*alinha no inicio*/
+        justify-content: flex-end; /*alinha no final*/
+        justify-content: center; /*alinha ao centro*/
+        justify-content: space-around; /*spaço envolta dos elementos*/
+        justify-content: space-between; /*spaço entre os elementos*/
+
+        /*cross Axis*/
+
+        height: 400px;
+        align-items: stretch; /*padrão*/
+        align-items: baseline; /*alinha pela linha de base da fonte*/
+        align-items: flex-start; /*alinha no topo*/
+        align-items: flex-end; /*alinha em baixo*/
+        align-items: center; /*alinha no centro*/
+
+        /*Mais de uma linha*/
+
+        align-content: flex-start; /*todas as linhas alinhadas ao topo*/
+        align-content: flex-end; /*todas as linhas alinhadas em baixo*/
+        align-content: center; /*todas as linhas alinhadas ao centro*/
+        align-content: space-around; /*todas as linhas spaço envolta dos elementos*/
+        align-content: space-between; /*todas as linhas spaço entre os elementos*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div class="big">3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>
+    </div>
+    <script src="js/tag.js"></script>
+  </body>
+</html>

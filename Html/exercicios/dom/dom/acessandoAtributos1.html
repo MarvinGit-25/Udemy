@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acessando Atributos #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+
+  <body class="conteudo exercicio">
+    <div>
+      <a href="https://www.cod3r.com.br">Cod3r</a>
+    </div>
+    <div id="primeiro">
+      <img
+        src="http://files.cod3r.com.br/curso-web/logo-estreita.png"
+        alt="logo"
+      />
+    </div>
+    <script>
+      const img = document.querySelector("img");
+      console.log("getAttribute", img.getAttribute("src")); // img.getAttribute pega o attrib indicado
+      console.log("src", img.src); // acessa diretamente o attrib
+      console.log("[src]", img["src"]); // acessa diretamente o attrib
+      console.log("alt", img.alt); // acessa diretamente o attrib
+
+      console.log('Elemento   "img.........................."');
+      console.log("NodeType", img.nodeType); // nodeType 1 quer dizer elemen
+      console.log("NodeName", img.nodeName); // nodeName mostra o nome do elemen
+
+      const src = img.getAttributeNode("src");
+      console.log("NodeType", src.nodeType); // nodeType  quer dizer attributo
+      console.log("NodeName", src.nodeName); // nodeName mostra o nome do attributo
+      console.log("NodeValue", src.nodeValue); // nodeValue mostra o valor do attributo
+
+      console.log("elemento (a)");
+      const Link = document.querySelector("a");
+      console.log("href", Link.href); // acessa diretamente o attrib
+      console.log("Link.firstChild.nodeType", Link.firstChild.nodeType); // pega o primeiro filho do elemen e retorna seu tipo
+      Link.firstChild.nodeValue = "Novo Texto"; // firstChild.nodeValue altera o valor do primeiro filho
+    </script>
+  </body>
+</html>

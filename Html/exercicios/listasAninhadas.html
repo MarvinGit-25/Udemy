@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu projeto</title>
+  </head>
+  <style>
+    body {
+      background-image: url(./design-de-telefone-celular-em-branco_20187-272.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 850px 850px;
+      margin: 550px;
+      color: rgb(47, 0, 255);
+    }
+    div {
+      /*background-image: url(./penguin-48559_640.png);*/
+      background-position: center;
+      padding-bottom: 200px;
+      width: 245px;
+      height: 200px;
+      border: grey 1px center solid;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    </header>
+    <div>
+      <ul class="tree">
+        <li>
+          <span wm-folder>Playlist</span>
+          <ul>
+            <li>
+              <span wm-folder>Minhas Bandas de rock</span>
+              <ul>
+                <li>Metalica</li>
+                <li>Iron Maiden</li>
+                <li>Gun`s and Roses</li>
+                <li>Nirvanna</li>
+              </ul>
+            </li>
+            <ul>
+              <li>
+                <span wm-folder>Eletronicas</span>
+                <ul>
+                  <li>Vintage Culture</li>
+                  <li>Phaxe</li>
+                  <li>Neelix</li>
+                  <li>Menumas</li>
+                </ul>
+              </li>
+            </ul>
+          </ul>
+        </li>
+        <li>
+          <span wm-folder>Variadas</span>
+          <ul>
+            <li>
+              <span wm-folder>forro misturado!!</span>
+              <ul>
+                <li>Barões da pisadinha</li>
+                <li>Aviões do forro</li>
+                <li>Saia rodada</li>
+                <li>Conde do forro</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <link
+        rel="stylesheet"
+        href="http://files.cod3r.com.br/curso-web/tree.css"
+      />
+      <script>
+        document.querySelectorAll("[wm-folder]").forEach((element) => {
+          element.onclick = function (e) {
+            const ul = element.nextElementSibling; // pega o proximo elemento
+            const display = ul.style.display;
+            ul.style.display = display === "none" ? "block" : "none";
+          };
+        });
+      </script>
+    </div>
+  </body>
+</html>

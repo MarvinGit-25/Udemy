@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+
+  <body class="conteudo exercicio">
+    <div>
+      <p>Início</p>
+    </div>
+    <div>
+      <ul>
+        <li>Pedro</li>
+        <li>Ana</li>
+        <li>Bia</li>
+      </ul>
+    </div>
+    <div>
+      <p>Fim</p>
+    </div>
+    <script>
+      function log() {
+        console.log(this);
+      }
+
+      HTMLCollection.prototype.log = log;
+      HTMLElement.prototype.log = log;
+      NodeList.prototype.log = log;
+      Node.prototype.log = log;
+
+      const lista = document.querySelector("div ul");
+      lista.parentNode.log(); /*parentNode acessa o elemento pai*/
+      lista.childNodes.log(); /*childNodes acessa o elemento filho*/
+
+      const primeiro =
+        lista.firstChild; /*firstChild retorna o primeiro elemen*/
+      primeiro.log();
+      primeiro.nextSibling.log(); /*nextSibling retorna o proximo elemen*/
+
+      const ultimo = lista.lastChild; /*lastChild retorna o ultimo elemen*/
+      ultimo.log();
+      ultimo.previousSibling.log(); /*previousSibling pega o elemen anterior*/
+
+      // forma mais interesante
+      lista.children.log(); /*children pega todos os elemen filhos sem text*/
+      lista.firstElementChild.log(); /*firstElementChild retorna o pri elemen sem texto*/
+      lista.lastElementChild.log(); // retorna o ultimo elemen sem text
+      lista.parentNode.previousSibling.log(); // mistura os dois
+      nextElementSibling.log(); // mistura os dois
+
+      document.querySelectorAll("div ul li").log();
+    </script>
+  </body>
+</html>

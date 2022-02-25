@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acessando Atributos #02</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+
+  <body class="conteudo exercicio">
+    <div>
+      <label for="compras">Compras</label>
+      <ul id="compras" destino="escritório" data-urgencia="5" data-blabla="Opa">
+        <li>Café</li>
+        <li>Água</li>
+        <li>Copo Descartável</li>
+      </ul>
+    </div>
+    <script>
+      console.log('Elemento  "Ul"...............');
+      const lista = document.querySelector("div ul[destino='escritório']");
+      console.log("childNodes", lista.childNodes); // acessa o elemento filhos
+      console.log("destino", lista.destino);
+      console.log("getAttribute", lista.getAttribute("destino")); // img.getAttribute pega o attrib indicado, Obs: considera as propriedades personalisadas
+      console.log("hasAttribute", lista.hasAttribute("destino")); // hasAttribute  se um attrib esta contido ou não dentro de um elemento
+      lista.setAttribute("destino", "empressa"); // serve pra setar ou alterar um attrib dentro de um elemento
+      lista.removeAttribute("destino"); // remove um attrib dentro de um elemento
+      console.log(lista.dataset);
+      console.log(lista.dataset.urgencia);
+      console.log((lista.dataset.urgencia = 4));
+      console.log(lista.getAttribute("data-urgencia"));
+
+      // Cuidado
+      const label = document.querySelector("label");
+      console.log(label.for);
+      console.log(label.htmlFor);
+      console.log(label.getAttribute("for"));
+    </script>
+  </body>
+</html>

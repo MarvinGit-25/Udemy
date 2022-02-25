@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unidades #01</title>
+    <style>
+      .unidades-absolutas {
+        position: absolute;
+        font-size: 40px; /*pixels*/
+        padding: 20px; /*pixels*/
+        border: solid 5px #222; /*pixels*/
+        width: 4cm; /*centimetros*/
+        height: 20mm; /*milimetros*/
+        top: 150px; /*pixels*/
+        left: 200px; /*pixels*/
+      }
+      .unidades-relativas {
+        position: absolute;
+        font-size: 4em; /*erda o tamanho da fonte do elemento pai*/
+        padding: 5%;
+        border: solid 1vw #222; /* vw largura do viewport vai ate 100*/
+        margin: 0.8%;
+        width: 20vw; /*largura do viewport vai ate 100*/
+        height: 15vh; /*Altura do viewport vai ate 100*/
+        bottom: 5%;
+        right: 5%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+  </body>
+</html>

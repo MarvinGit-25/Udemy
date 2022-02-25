@@ -1,0 +1,19 @@
+h1 {
+  font-size: 20px;
+}
+.FundoVermelho {
+  background-color: red;
+}
+.negrito {
+  font-weight: bold;
+}
+#textoprincipal {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+  background-color: #444;
+}
+span {
+  margin-bottom: 50px;
+}

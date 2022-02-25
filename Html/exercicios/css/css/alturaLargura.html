@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Altura e Largura</title>
+    <style>
+      body {
+        font-size: 40px;
+        background-color: coral;
+        height: 100%; /*altura em percentual leva em consideração o parent */
+        margin: 0;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      div {
+        background-color: seagreen;
+      }
+
+      span {
+        background-color: dodgerblue;
+      }
+
+      span,
+      div {
+        width: 50%;
+        height: 250px;
+        height: 50%;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--body por padão ocupa a largura toda mas a altura não-->
+    <div>Título</div>
+    <span>Subtítulo</span>
+  </body>
+</html>

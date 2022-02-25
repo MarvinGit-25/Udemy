@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios</title>
+  </head>
+  <style>
+    #conteudo {
+      padding: 30px 0px;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Exercicios</h1>
+    </header>
+    <nav>
+      <a href="exercicios/tagsTexto1.html">00-Tags</a> |
+      <a href="exercicios/listas.html">01-listas</a> |
+      <a href="exercicios/listasAninhadas.html">02-listasAninhadas</a> |
+      <a href="exerccios/links.html">03-Links</a> |
+      <a href="exercicios/tabelas.html">04-Tabelas</a> |
+      <a href="exercicios/form/form.html">05-Formulario</a> |
+      <a href="exercicios/imagens.html">imagens</a> |
+      <a href="exercicios/video.html">07-Videos </a> |
+      <a href="exercicios/tagsNaoVisuais.html">08-tags não visuais </a> |
+    </nav>
+    <section id="conteudo"></section>
+    <footer><h1>curso de web moderno</h1></footer>
+    <script>
+      document.querySelectorAll("a").forEach((link) => {
+        const conteudo = document.getElementById("conteudo");
+
+        link.onclick = function (e) {
+          e.preventDefault();
+          fetch(link.href) // requisição ajax
+            .then((resp) => resp.text())
+            .then((html) => (conteudo.innerHTML = html));
+        };
+      });
+    </script>
+  </body>
+</html>
