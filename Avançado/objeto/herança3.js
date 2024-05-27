@@ -19,5 +19,12 @@ for (let key in filha2) {
   filha2.hasOwnProperty(key) ? // hasOwnProperty diz se o atributo pertece ao objeto
     console.log(key) : console.log(`Por herança: ${key}`)
 }
+// teste 
+const obj = Object.create(pai, {
+  idade : {value: 25, writable: false, enumerable: true},
+  altura:{value: 165}
+})
+console.log(obj.corcabelo)
+
 
 

@@ -1,4 +1,4 @@
-const sequencia = {
+  const sequencia = {
   _valor: 1, // convenção
   get valor() { // retorna valor de uma variavel.
     return this._valor++
@@ -10,5 +10,5 @@ const sequencia = {
   }
 }
 console.log(sequencia.valor, sequencia.valor)
-sequencia.valor = 1000
+sequencia.valor = 100
 console.log(sequencia.valor, sequencia.valor)

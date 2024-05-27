@@ -11,6 +11,7 @@ app.post('/usuarios', (req, res) => {
 })
 
 app.post('/usuarios/:id', (req, res) => {
+  res.send('<h1>Parabéns Usuario alterado</h1>')
   console.log(req.params.id)
   console.log(req.body)
 

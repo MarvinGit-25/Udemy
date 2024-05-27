@@ -8,31 +8,31 @@
 
   <body class="conteudo exercicio">
     <script>
-      const body = document.querySelector("body");
-      const div1 = document.createElement("div");
-      div1.classList.add("destaque");
-      div1.innerHTML = "primeira div";
+      const body = document.querySelector("body"); // pega o elemento body
+      const div1 = document.createElement("div"); //createElement cria um elemento
+      div1.classList.add("destaque"); // classList add uma classe
+      div1.innerHTML = "primeira div"; // adiciona um html
 
       const div2 = document.createElement("div");
-      div2.setAttribute("wm-atributo", "valor");
+      div2.setAttribute("wm-atributo", "valor"); //setAttribute seta um atributo e seu valor
       div2.innerHTML = "segunda div";
 
       const p = document.createElement("p");
       p.innerHTML = "terceiro";
       const div3 = document.createElement("div");
       div3.classList.add("destaque");
-      div3.appendChild(p);
+      div3.appendChild(p); //appendChild add um elemen filho
 
       body.appendChild(div1);
       body.appendChild(div2);
       body.appendChild(div3);
 
-      const texto = document.createTextNode("Antes");
-      div3.insertBefore(texto, div3.childNodes[0]);
+      const texto = document.createTextNode("Antes"); // createTextNode cria um texto
+      div3.insertBefore(texto, div3.childNodes[0]); //insertBefore add um elem filho e sua posição
 
-      const div4 = div3.cloneNode(true);
+      const div4 = div3.cloneNode(true); // cria um clone do elem e seus filhos
       body.appendChild(div4);
-      body.removeChild(div3);
+      body.removeChild(div3); //removeChild remove um elemento e seus filhos
     </script>
   </body>
 </html>

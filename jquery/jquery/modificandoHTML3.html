@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #03</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #03</h1>
+    <div id='conteudo'>
+        
+    </div>
+    <div id="resultado">
+        resultado
+    </div>
+
+    <script>
+        //$(function () {
+
+            const alunos = [
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Julia', nota: 9.7 }
+            ]
+
+
+            const escola = alunos.map(aluno => {
+                const nomeAluno = $('<td>').append(aluno.nome)
+                const notaAluno = $('<td>').append(aluno.nota)
+                return $('<tr>').append(nomeAluno, notaAluno)
+
+               
+                
+            })
+
+            const tabela = $('<table>').append(escola)
+            $('#conteudo').append(tabela).css("barder", "solid 2px black")
+            $('#conteudo').append('<button><input type="text" placeholder="digite aqui sua nota" id=nota>Enviar</button>')
+            $('button').css('background-color', "grey")
+            $('button').click(function(){
+                if(button.value >= 7){
+                    $('#resultado').append('Aprovado')
+                }else{
+                    $('#resultado').append('Reprovado')
+                }
+            })
+        //})
+    </script>
+</body>

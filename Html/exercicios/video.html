@@ -42,13 +42,13 @@
 <script>
   function configurarVideo(id) {
     const video = document.getElementById(id);
-    video.oncontextmenu = () => false;
+    video.oncontextmenu = () => false; // esconde o menu do mouse
 
     document.querySelector(`[wm-play=${id}]`).onclick = (e) => video.play();
     document.querySelector(`[wm-pause=${id}]`).onclick = (e) => video.pause();
 
     setInterval(() => {
-      const percentual = (video.currentTime / video.duration) * 100;
+      const percentual = (video.currentTime / video.duration) * 100; // currenttime mostra percentual atual, duration representa a duração do vídeo, em segundos
       const valordiv = document.querySelector(`[wm-progress=${id}] > div`);
       valordiv.style.width = `${percentual}%`;
       valordiv.innerHTML = `${percentual.toFixed(1)}`;

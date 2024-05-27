@@ -25,6 +25,7 @@
         order: 1; /*Manipula a ordem dos elementos*/
         order: 0;
         order: -1;
+        /* align-self alinha um item especifico */
         align-self: center; /*centraliza*/
         align-self: flex-end; /*alinha no final*/
         align-self: flex-start; /*alinha no inicio*/
@@ -33,21 +34,21 @@
 
       .flex-container div {
         width: 100px;
-        flex-grow: 0; /*aumenta o tamanho dos itens*/
-        flex-grow: 1; /*aumenta o tamanho dos itens*/
+        flex-grow: 0; /*aumenta o tamanho dos itens de acordo com peso dado*/
+        flex-grow: 1; /*aumenta o tamanho dos itens de acordo com peso dado*/
       }
 
       .flex-container div:nth-child(1) {
-        flex-grow: 2; /*aumenta o tamanho dos itens*/
+        flex-grow: 2; /*aumenta o tamanho dos itens de acordo com peso dado*/
       }
 
       .flex-container {
         width: 300px;
-        flex-shrink: 1; /*reduz o tamanho dos itens*/
+        flex-shrink: 1; /*reduz o tamanho dos itens de acordo com peso dado*/
       }
 
       .flex-container div:nth-child(1) {
-        flex-shrink: 5; /*reduz o tamanho dos itens*/
+        flex-shrink: 5; /*reduz o tamanho dos itens de acordo com peso dado*/
       }
     </style>
   </head>

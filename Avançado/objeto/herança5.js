@@ -1,11 +1,11 @@
-console.log(typeof String)
-console.log(typeof Array)
-console.log(typeof Object)
+console.log(typeof String) //função Prototype
+console.log(typeof Array) //função Prototype
+console.log(typeof Object) //função e tbm tem Prototype
 
-String.prototype.reverse = function () {
+String.prototype.reverse = function () { // criando uma função no prototype da string
   return this.split('').reverse().join('')
 }
-console.log('escola coder'.reverse())
+console.log('escola coder'.reverse()) // chamando a função prototype da String 
 
 Array.prototype.first = function () {
   return this[0]

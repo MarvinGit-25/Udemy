@@ -7,13 +7,13 @@ const ObjPessoa = {
   },
   envelhecer(anos) {
     this.idade += anos || 1
-    console.log(this)
+    console.log(this.idade)
   }
 
 }
 
-//ObjPessoa.falar("futuro desenvolvedor web")
-//ObjPessoa.envelhecer()
+ObjPessoa.falar("futuro desenvolvedor web")
+ObjPessoa.envelhecer()
 
 console.log("::::::::::::::::::")
 // função construtora
@@ -26,7 +26,7 @@ function pessoa(nome, idade) {
   }
   this.envelhecer = (anos) => {
     this.idade += anos || 1
-    console.log(this)
+    console.log(this.idade)
   }
 }
 
@@ -36,6 +36,6 @@ console.log(Vinicius)
 Vinicius.falar("Futuro Desenvolvedor Web")
 
 const Janaina = new pessoa("Janaina", 23)
-Janaina.falar("ola")
+Janaina.envelhecer(12)
 
 

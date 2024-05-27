@@ -24,7 +24,7 @@ console.log("<<<teste>>>")
 
 const Mercado = {
     produto: {
-        produto: "Arroz",
+        produto: "Arroz", // acontece uma sobrescrita 
         produto: "Feijão",
         produto: "Farinha"
 

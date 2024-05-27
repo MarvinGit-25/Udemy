@@ -18,7 +18,6 @@ console.log(aprovados[8] === undefined) // testando se é undefined
 
 console.log(aprovados)
 
-console.log(aprovados)
 aprovados.sort // sort ordena o array
 console.log(aprovados)
 
@@ -28,5 +27,5 @@ console.log(aprovados[1])
 console.log(aprovados[2])
 
 aprovados = ['bia', 'carlos', 'ana']
-aprovados.splice(1, 1, 'elemento1', 'elemento2') // adiciona e remove do array
+aprovados.splice(0, 1, 'elemento1', 'elemento2') // adiciona e remove do array
 console.log(aprovados)

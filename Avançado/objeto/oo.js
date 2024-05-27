@@ -1,4 +1,4 @@
-// codigo nãp execultavel 
+// codigo não execultavel 
 
 // procedural
 processamento(valor, valor2, valor3)

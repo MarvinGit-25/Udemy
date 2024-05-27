@@ -6,3 +6,4 @@ let número = 1
   console.log("dentro =", número) // prioriza primeiro o escopo de bloco.
 }
 console.log("fora =", número)
+

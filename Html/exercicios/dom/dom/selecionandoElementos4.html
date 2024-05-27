@@ -32,23 +32,23 @@
 
       const lista = document.querySelector("div ul");
       lista.parentNode.log(); /*parentNode acessa o elemento pai*/
-      lista.childNodes.log(); /*childNodes acessa o elemento filho*/
+       lista.childNodes.log(); /*childNodes acessa o elemento filho*/
 
-      const primeiro =
-        lista.firstChild; /*firstChild retorna o primeiro elemen*/
-      primeiro.log();
+       const primeiro =
+         lista.firstChild; /*firstChild retorna o primeiro elemen*/
+       primeiro.log();
       primeiro.nextSibling.log(); /*nextSibling retorna o proximo elemen*/
 
       const ultimo = lista.lastChild; /*lastChild retorna o ultimo elemen*/
       ultimo.log();
       ultimo.previousSibling.log(); /*previousSibling pega o elemen anterior*/
-
-      // forma mais interesante
+      console.log("----------------")
+        //forma mais interesante
       lista.children.log(); /*children pega todos os elemen filhos sem text*/
       lista.firstElementChild.log(); /*firstElementChild retorna o pri elemen sem texto*/
       lista.lastElementChild.log(); // retorna o ultimo elemen sem text
       lista.parentNode.previousSibling.log(); // mistura os dois
-      nextElementSibling.log(); // mistura os dois
+      lista.nextElementSibling.log(); // mistura os dois
 
       document.querySelectorAll("div ul li").log();
     </script>

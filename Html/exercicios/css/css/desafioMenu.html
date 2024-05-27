@@ -19,11 +19,11 @@
       body {
         background-color: darkgray;
         margin: 0;
-        font-family: "Oswald" sans-serif;
+        font-family: "Oswald", sans-serif;
       }
 
       .cabecalho {
-        background: maroon;
+        background: black;
         border-bottom: 2px solid lightblue;
         height: 80px;
         box-sizing: content-box;
@@ -155,6 +155,7 @@
         const OldURL = e.OldURL.split("#")[1]; // url antiga
         const newURL = e.newURL.split("#")[1]; // url nova
         console.log(OldURL, newURL);
+        
         const oldMenu = document.querySelector(`.menu a[href='#${OldURL}']`); // pega a url antiga
         const newMenu = document.querySelector(`.menu a[href='#${newURL}']`); // pega a url nova
         oldMenu && oldMenu.classList.remove("selected");

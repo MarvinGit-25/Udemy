@@ -32,4 +32,4 @@ Array.prototype.flatmap = function (callback) { // é um map + concat
 }
 
 const notas2 = escola.flatmap(GetNotasDaTurma)
-console.log(notas2)
+console.log(notas2) 

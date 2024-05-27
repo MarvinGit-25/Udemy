@@ -3,12 +3,13 @@ const pessoa = {
   idade: 2,
   peso: 13
 }
+
 console.log(Object.keys(pessoa)) // função do objeto que retira os atributos de dentro do objeto.
 console.log(Object.values(pessoa)) // função do objeto que retira os valores de dentro do objeto.
 console.log(Object.entries(pessoa)) // função do objeto que Retorna um array com subarrays chave/valor.
 
 Object.entries(pessoa).forEach(e => { // aparti do foreach vou percorrer o array 
-  console.log(e[0], e[1])         //que foi criado pela função object.entries(pessoa).
+  console.log("=>",e[0], e[1])         //que foi criado pela função object.entries(pessoa).
 
 });
 

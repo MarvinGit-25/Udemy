@@ -3,7 +3,7 @@ function getpreco(imposto = 0, moeda = "R$") {
 }
 
 const produto = {
-  nome: "notebook",
+  nome: "notebook", 
   preço: 4589,
   desc: 0.15,
   getpreco // associa com a função getpreco!! |^|
@@ -13,6 +13,8 @@ global.desc = 0.1
 console.log(getpreco())
 console.log(produto.getpreco()) // NaN | this no contexto do global não esta definnido.
 console.log("-------------------------------")
+console.log("-------------------------------")
+
 
 const carro = { preco: 4999, desc: 0.20, }
 

@@ -11,7 +11,7 @@ new pessoa1
 console.log("--------------------")
 // metodo 2.
 // Neste exemplo não importa onde ou quem chame a função, ela nunca vai variar.
-// Pq this esta armazenado em uma variável
+// Pq this esta armazenado em uma variável constante
 
 function pessoa() {
   this.idade = 0
@@ -25,11 +25,11 @@ function pessoa() {
 new pessoa
 
 
-// Com arrow não é necessario usar this muito menos bind.
+// Com arrow function não é necessario usar this muito menos bind.
 console.log("-------------------")
 function pessoa2() {
   this.carro = 0
-  setInterval(() => {
+  setInterval(() => { // <= arrow function 
     this.carro++
     console.log("carro =", this.carro)
   }, 1000)

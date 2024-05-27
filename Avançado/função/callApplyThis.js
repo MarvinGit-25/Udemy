@@ -1,19 +1,10 @@
 
 const falar = () => {
-  console.log("futuro")
+  console.log("oi meu nome é", this.nome)
 }
-const obj = { nome: "Marcos", }
+const obj = { nome: "Marcos"}
 
 falar.call(obj)
-
-const falar2 = () => {
-  console.log("programador")
-}
-const obj2 = { nome: "marcos", }
-
-falar2.apply(obj2)
-
-
 
 
 console.log("+++++++++++++++++++++")

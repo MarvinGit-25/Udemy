@@ -28,7 +28,7 @@ function IMC(peso = 60, altura = 1.65) {
     var imc = peso / altura ^ 2
     return imc
 }
-console.log(IMC())
+console.log("seu imc é",IMC())
 
 
 

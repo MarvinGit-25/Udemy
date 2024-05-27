@@ -4,7 +4,7 @@
 function obj(obj) {
   return obj
 }
-console.log(obj({ nome: "Marcos Vinicius" }))
+console.log(obj({ nome: "Marcos Vinicius", idade: 13 }))
 
 console.log("++++++++++")
 
@@ -54,7 +54,7 @@ function obj3() {
   }
 }
 
-console.log(obj3())
+console.log(obj3)
 
 console.log("++++++++++")
 
@@ -91,7 +91,7 @@ function Aluno(nota1, nota2, nota3) {
 
 }
 const escola = new Aluno(10, 10, 10)
-console.log(escola.func())
+console.log("Sua nota foi a nota ",escola.func())
 console.log()
 
 

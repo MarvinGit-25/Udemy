@@ -1,6 +1,6 @@
 const aprovados = ['aldo', 'aghata', 'daniel', 'raquel']
-aprovados.forEach(function (nome, indice) { // forEach percorre o array = callback
-  console.log(`${indice + 1}: ${nome}`)
+aprovados.forEach(function (nome, indice, array) { // forEach percorre o array, retornando nome e indice e o proprio array
+  console.log(`${indice + 1}: ${nome} ${array}`)
 })
 
 aprovados.forEach((nome) => console.log(nome)) // forEach arrow_function

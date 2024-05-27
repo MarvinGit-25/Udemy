@@ -15,12 +15,12 @@
 
       /*getElementsByName retorna um HtmlCollection
       e pode transformar em Array*/
-      const divs = document.getElementsByName("div");
-      Array.from(divs).forEach((e) => e.classList.remove("destaque"));
+      const divs = document.getElementsByTagName('div')
+      Array.from(divs).forEach((e) => e.classList.remove("destaque"))
 
       /*dessa maneira também é possivél transformar um HtmlCollection em Array*/
       const divsArray = [...divs];
-      divs.forEach((e) => e.classList.add("destaque"));
+      divsArray.forEach((e) => e.classList.add("destaque"));
 
       /*getElementsByClassName também retorna um HtmlCollection, mas com um único elemento */
       const ultimoselementos = document.getElementsByClassName("ultimo");

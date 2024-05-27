@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #01</h1>
+    <div id='conteudo1'></div>
+    <div id='conteudo2'></div>
+    <div id='conteudo3'></div>
+
+    <script>
+        // conteudo 1
+        $('#conteudo1').append('<p>conteudo1</p>') // append cria elementos dentro da paginda html
+
+        // conteudo2
+        const elementos = [
+            $('<li></li>').append('arroz'),
+            $('<li>').append('feijão'),
+            $('<li></li>').append("carne")
+           
+        ]
+
+        const nav = $('<nav><li>sorvete</li></nav>').prepend(elementos) // prepend coloca os elementos antes dos elementos que ja existian em x lugar
+        $('#conteudo2').append(nav)
+
+        // conteudo3
+        $('#conteudo3').append(['<h1>1</h1> <h1>2</h1> '].concat(nav.css("border", '1px solid black' ))).prepend('<h1>0</h1>')
+       // $('#conteudo3').html('<h1>123</h1>') // html subtitue todo conteudo pelo conteudo passado
+       // $('#conteudo3').text("adiciona um texto na tag")
+    </script>
+</body>

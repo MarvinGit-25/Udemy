@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Eventos #03</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+        input {
+            font-size: 2em;
+        }
+
+        #resultado {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Eventos #03</h1>
+    <div id='div1'>1</div>
+    <div id='div2'>2</div>
+    <div id="div3">3</div>
+    <input id='input1' type='text' placeholder='Digite Algo!'>
+    <span id='resultado'>resultado</span>
+
+    <script>
+        function exibirDadosdoEvento(e) {
+            $('#resultado').empty() // limpa 
+            const div1 = $('<div>')
+            const div2 = $('<div>')
+            const div3 = $('<div>')
+
+            $('#resultado').append(div1, div2, div3)
+            div1.append(`target: ${e.target.id}`)
+
+            const rt = e.reletedTarget ? e.reletedTarge.tagName : null
+            div1.append(`<br>releatedTarget: ${rt}`)
+            
+            div1.append(`<br>tipo de evento ${e.type}`) 
+            div1.append(`<br>Tecla/teclado ${e.which}`)
+            div1.append(`<br>metaKey ${e.metaKey}`)
+            
+            // posicionamentos do mouse
+            div2.append(`pageX ${e.pageX}`)
+            div2.append(`<br>pageY ${e.pageY}`)
+            div2.append(`<br>clientX ${e.clientX}`)
+            div2.append(`<br>clientY ${e.clientY}`)
+        
+            const obs = e.data ? e.data.obs : null
+            div2.append(`<br> obs: ${obs}`)
+        }
+        // passando um objeto pra um evento
+        $('#div1, #div2, #div3').on('mouseenter mouseleave', {obs: 'funciona'}, exibirDadosdoEvento) 
+        $('input').keyup(exibirDadosdoEvento)
+
+
+    </script>
+</body>
